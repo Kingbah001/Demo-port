@@ -1,0 +1,117 @@
+@media screen and (max-width: 1220px){
+    .menu-bar{
+        display: none;
+    }
+    .nav-mobile{
+        display: flex;
+    }
+    .mobile-link-holder{
+        display: flex;
+    }
+    .hero-content{
+        text-align: center;
+    }
+    .work-header{
+        text-align: center;
+    }
+    .work-card{
+        display: block;
+        text-align: center;
+    }
+    .about-card{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+    .icon{
+        border: 2px solid white;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 15px;
+    }
+    .comment{
+        width: 90vw;
+    }
+    .comment-header{
+        text-align: center;
+    }
+    .comment-body{
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        /* align-items: center; */
+        
+    }
+    .commentators,
+    .comment-rightdiv{
+        width: 90vw;
+        text-align: center;
+    }
+    .experience{
+        display: flex;
+        flex-direction: column;
+    }
+    .content-middle{
+        padding: 0;
+        padding: 20px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .content-middle p{
+         border-left: 0;
+        border-right: 0;
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 15px 0;
+        padding: 20px 0;
+    }
+   .about-header{
+    text-align: center;
+   }
+   .about-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   }
+   .card-writeup{
+    margin-bottom: 25px;
+   }
+   .story{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+   }
+   .rightdiv-story{
+    margin-bottom: 40px;
+   }
+   .footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   }
+   .footer-icon-holder{
+    margin-top: 15px;
+   }
+   .about-card-button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+   button{
+    margin: 0;
+   }
+}

@@ -3,25 +3,76 @@
     padding: 0;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 
-body{
-    height:100%;
+body {
+    height: 100%;
     margin: 0;
     --x: calc(var(--posX, 0) * 1px);
     --y: calc(var(--posY, 0) * 1px);
-    background-image: 
-      linear-gradient(115deg, rgb(211 255 215), rgb(0 0 0)), 
-      radial-gradient( 90% 100% at calc( 50% + var(--x)) calc( 0% + var(--y)), rgb(200 200 200), rgb(022 000 045)), 
-      radial-gradient(100% 100% at calc( 80% - var(--x)) calc( 0% - var(--y)), rgb(250 255 000), rgb(036 000 000)), 
-      radial-gradient(150% 210% at calc(100% + var(--x)) calc( 0% + var(--y)), rgb(020 175 125), rgb(000 010 255)), 
-      radial-gradient(100% 100% at calc(100% - var(--x)) calc(30% - var(--y)), rgb(255 077 000), rgb(000 200 255)), 
-      linear-gradient(60deg, rgb(255 000 000), rgb(120 086 255));
+    background-image:
+        linear-gradient(115deg, rgb(211 255 215), rgb(0 0 0)),
+        radial-gradient(90% 100% at calc(50% + var(--x)) calc(0% + var(--y)), rgb(200 200 200), rgb(022 000 045)),
+        radial-gradient(100% 100% at calc(80% - var(--x)) calc(0% - var(--y)), rgb(250 255 000), rgb(036 000 000)),
+        radial-gradient(150% 210% at calc(100% + var(--x)) calc(0% + var(--y)), rgb(020 175 125), rgb(000 010 255)),
+        radial-gradient(100% 100% at calc(100% - var(--x)) calc(30% - var(--y)), rgb(255 077 000), rgb(000 200 255)),
+        linear-gradient(60deg, rgb(255 000 000), rgb(120 086 255));
     background-blend-mode: overlay, overlay, difference, difference, difference, normal;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
-  }
+}
 
 /* hero section starts */
+.mobile-link-holder {
+    transform: translateX(200%);
+    width: 50%;
+    height: 33vh;
+    position: fixed;
+    background: navy;
+    right: 0;
+    top: 0;
+    font-size: 20px;
+    transition: all 0.8s ease;
+}
+
+.show-mobile-link-holder {
+    transform: translateX(0);
+}
+
+.mobile-link-holder ul {
+    list-style: none;
+    display: block;
+     width: 100%;
+}
+
+.mobile-link-holder a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    padding: 15px 0 15px 20px;
+}
+
+.mobile-active-link {
+    background: white;
+    color: navy !important;
+}
+
+.backdrop {
+    height: 100%;
+    width: 100%;
+    background: var(--light-text-color);
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+}
+
+.show-backdrop {
+    display: block;
+}
+
 .hero {
     /* border: 3px solid black; */
     width: 90%;
@@ -42,7 +93,8 @@ body{
     align-items: center;
     justify-content: center;
 }
-.logo-message{
+
+.logo-message {
     border: 2px solid white;
     width: 35px;
     height: 35px;
@@ -103,6 +155,78 @@ body{
 
 /* hero section ends */
 
+/* mobile section starts */
+.nav-mobile {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background: navy;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.mobile-logo {
+    display: flex;
+    color: white;
+    align-items: center;
+}
+
+.hamburger {
+    /* border: 2px solid white; */
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 6;
+    cursor: pointer;
+}
+
+.mobile-menu {
+    height: 3px;
+    background: white;
+    width: 100%;
+    position: relative;
+}
+
+.mobile-menu::before,
+.mobile-menu::after {
+    content: '';
+    background: white;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+}
+
+.mobile-menu::before {
+    transform: translateY(-10px);
+}
+
+.mobile-menu::after {
+    transform: translateY(10px);
+}
+
+.showburger .mobile-menu {
+    background: transparent;
+}
+
+.showburger .mobile-menu::before {
+    transform: rotate(-45deg);
+    background: navy !important;
+
+}
+
+.showburger .mobile-menu::after {
+    transform: rotate(45deg);
+    background: navy !important;
+
+}
+
+/* mobile section ends */
+
 /* work section starts */
 .work {
     /* border: 3px solid black; */
@@ -159,9 +283,9 @@ body{
     cursor: pointer;
 }
 
-button{
+button {
     border: none;
-    background:  rgba(19, 19, 250, 0.623);
+    background: rgba(19, 19, 250, 0.623);
     color: #FFFF;
     display: flex;
     justify-content: center;
@@ -176,58 +300,68 @@ button{
     height: 27px;
 }
 
-button i{
+button i {
     margin-left: 7px;
 }
 
-button:hover{
+button:hover {
     /* font-weight: bold; */
     font-size: 18px;
 }
-.comment{
+
+.comment {
     /* border: 3px solid yellow; */
     width: 90%;
     margin: 0 auto;
 }
-.comment-header{
+
+.comment-header {
     /* border: 3px solid black; */
     display: flex;
     flex-direction: column;
     text-align: center;
 }
-.comment-header h1{
+
+.comment-header h1 {
     font-size: 45px;
 }
-.comment-header p{
+
+.comment-header p {
     font-size: 18px;
     margin: 15px 0;
 }
-.comment-body{
+
+.comment-body {
     /* border: 3px solid green; */
     display: flex;
     justify-content: space-between;
 }
-.comment-leftdiv{
+
+.comment-leftdiv {
     /* border: 3px solid tomato; */
     width: 49%;
 }
-.commentators{
+
+.commentators {
     /* border: 3px solid purple; */
     border: 1px solid #FFFF;
     border-radius: 10px;
     padding: 15px;
     margin-bottom: 15px;
 }
-.commentators p{
+
+.commentators p {
     margin-bottom: 10px;
     font-size: 18px;
     line-height: 25px;
 }
-.commentators span{
+
+.commentators span {
     font-size: 25px;
     font-weight: 600;
 }
-.comment-rightdiv{
+
+.comment-rightdiv {
     /* border: 3px solid navy; */
     width: 49%;
     border: 1px solid #FFFF;
@@ -235,16 +369,19 @@ button:hover{
     padding: 15px;
     margin-bottom: 15px;
 }
-.comment-rightdiv p{
+
+.comment-rightdiv p {
     margin-bottom: 10px;
     font-size: 18px;
     line-height: 25px;
 }
-.comment-rightdiv span{
+
+.comment-rightdiv span {
     font-size: 25px;
     font-weight: 600;
 }
-.experience{
+
+.experience {
     border: 2px solid blue;
     margin: 50px 0;
     border-radius: 15px;
@@ -256,25 +393,29 @@ button:hover{
     align-items: center;
     text-align: center;
 }
-.content p{
+
+.content p {
     font-size: 50px;
     margin-bottom: 8px;
 }
-.content-middle p{
+
+.content-middle p {
     font-size: 50px;
     margin-bottom: 8px;
     border-left: 1px solid rgba(32, 32, 241, 0.623);
     border-right: 1px solid rgba(32, 32, 241, 0.623);
     padding: 0 150px;
 }
+
 /* work section ends here */
 
 /* about section starts */
 
-.about{
+.about {
     width: 90%;
     margin: 0 auto;
 }
+
 .about-header h2 {
     font-size: 35px;
 }
@@ -285,6 +426,7 @@ button:hover{
     margin: 12px 0 20px 0;
 
 }
+
 .about-cards {
     /* border: 3px solid black; */
     display: flex;
@@ -293,55 +435,67 @@ button:hover{
     margin-bottom: 10px;
     /* justify-content: center; */
 }
-.story{
+
+.story {
     /* border: 3px solid yellow; */
     display: flex;
     padding: 20px;
     margin: 100px 0 20px 0;
     justify-content: space-between;
 }
-.image-writeup{
+
+.image-writeup {
     /* border: 3px solid yellow; */
     text-align: center;
 }
-.image-writeup h2{
+
+.image-writeup h2 {
     font-size: 38px;
 }
-.image-writeup span{
+
+.image-writeup span {
     font-size: 23px;
     display: flex;
     margin: 15px 0;
 }
-.image-writeup button{
+
+.image-writeup button {
     margin-left: 25%;
 }
-.image-writeup i{
+
+.image-writeup i {
     margin-right: 8px;
     padding: 5px;
 }
-.rightdiv-story h1{
+
+.rightdiv-story h1 {
     font-size: 35px;
     margin-bottom: 20px;
-     color: rgb(150, 150, 150)
+    color: rgb(150, 150, 150)
 }
-.rightdiv-story p{
+
+.rightdiv-story p {
     line-height: 25px;
     font-size: 17px;
     color: rgb(122, 122, 122);
 }
-.footer{
+
+.footer {
     display: flex;
     justify-content: space-between;
     padding: 20px;
 }
-.footer p{
+
+.footer p {
     font-size: 20px;
     font-weight: 550;
 }
-.footer a{
+
+.footer a {
     text-decoration: none;
     font-size: 25px;
     color: navy;
     margin-left: 9px;
 }
+
 /* about section ends */
