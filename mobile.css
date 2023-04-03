@@ -15,7 +15,10 @@
         text-align: center;
     }
     .work-card{
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
         text-align: center;
     }
     .about-card{
@@ -42,8 +45,6 @@
     .comment-body{
         display: flex;
         flex-direction: column;
-        /* justify-content: center; */
-        /* align-items: center; */
         
     }
     .commentators,
