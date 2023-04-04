@@ -3,7 +3,8 @@
     padding: 0;
     box-sizing: border-box;
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
 
@@ -44,7 +45,7 @@ body {
 .mobile-link-holder ul {
     list-style: none;
     display: block;
-     width: 100%;
+    width: 100%;
 }
 
 .mobile-link-holder a {

@@ -1,32 +1,54 @@
-@media screen and (max-width: 1220px){
-    .menu-bar{
+@media screen and (max-width: 1220px) {
+    .menu-bar {
         display: none;
     }
-    .nav-mobile{
+
+    .nav-mobile {
         display: flex;
     }
-    .mobile-link-holder{
+
+    .mobile-link-holder {
         display: flex;
     }
-    .hero-content{
+    .hero{
+        /* border: 3px solid rgb(15, 15, 139); */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        padding-bottom: 20px;
+        background: rgb(15, 15, 139);
+    }
+
+    .hero-content {
+        /* border: 3px solid yellow; */
+        color: rgb(177, 177, 177);
         text-align: center;
     }
-    .work-header{
+    .hero-content h1{
+        margin-bottom: 25px;
+    }
+
+    .work-header {
         text-align: center;
     }
-    .work-card{
+
+    .work-card {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         text-align: center;
     }
-    .about-card{
+
+    .about-card {
         display: flex;
         justify-content: center;
         margin-bottom: 40px;
     }
-    .icon{
+
+    .icon {
         border: 2px solid white;
         width: 30px;
         height: 30px;
@@ -36,27 +58,33 @@
         align-items: center;
         margin-left: 15px;
     }
-    .comment{
+
+    .comment {
         width: 90vw;
     }
-    .comment-header{
+
+    .comment-header {
         text-align: center;
     }
-    .comment-body{
+
+    .comment-body {
         display: flex;
         flex-direction: column;
-        
+
     }
+
     .commentators,
-    .comment-rightdiv{
+    .comment-rightdiv {
         width: 90vw;
         text-align: center;
     }
-    .experience{
+
+    .experience {
         display: flex;
         flex-direction: column;
     }
-    .content-middle{
+
+    .content-middle {
         padding: 0;
         padding: 20px 0;
         display: flex;
@@ -64,11 +92,13 @@
         justify-content: center;
         align-items: center;
     }
-    .content-middle p{
-         border-left: 0;
+
+    .content-middle p {
+        border-left: 0;
         border-right: 0;
     }
-    .content{
+
+    .content {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -76,43 +106,52 @@
         margin: 15px 0;
         padding: 20px 0;
     }
-   .about-header{
-    text-align: center;
-   }
-   .about-card{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-   }
-   .card-writeup{
-    margin-bottom: 25px;
-   }
-   .story{
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-   }
-   .rightdiv-story{
-    margin-bottom: 40px;
-   }
-   .footer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-   }
-   .footer-icon-holder{
-    margin-top: 15px;
-   }
-   .about-card-button{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   }
-   button{
-    margin: 0;
-   }
+
+    .about-header {
+        text-align: center;
+    }
+
+    .about-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-writeup {
+        margin-bottom: 25px;
+    }
+
+    .story {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .rightdiv-story {
+        margin-bottom: 40px;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-icon-holder {
+        margin-top: 15px;
+    }
+
+    .about-card-button {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    button {
+        margin: 0;
+    }
 }
